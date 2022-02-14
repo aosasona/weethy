@@ -83,7 +83,7 @@ export default class App extends Component {
              {
                  this.state.q !== '' && this.state.icon !== null ?
 
-            <div className='text-gray-400 lg:mx-20 mt-4 lg:mt-0 overflow-y-scroll'>
+            <div className='text-gray-400 lg:mx-20 mt-4 lg:mt-0'>
                 
                 <center className='mb-5'>
                     <img src={'https:' + this.state.icon} className='p-1 w-2/3' alt='weather icon'/>
