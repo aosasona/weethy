@@ -5,10 +5,10 @@ export default class Nav extends Component {
   render() {
     return (
     <div>
-        <div className='flex p-5 px-5 w-screen justify-between items-center'>
+        <div className='flex p-5 px-6 w-screen justify-between items-center'>
         <div className='flex items-center'>
             <img src={logo} className='w-9 h-9 bg-white p-2 rounded-[50%]'/>
-            <span class="text-zinc-300 font-normal text-[17px] ml-3"><span className='text-[20px]'>W</span>eethy</span>
+            <span className="text-zinc-300 font-normal text-[17px] ml-3"><span className='text-[20px]'>W</span>eethy</span>
             </div>
 
             <div>

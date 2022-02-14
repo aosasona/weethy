@@ -70,10 +70,10 @@ export default class App extends Component {
     return (
       <div>
           <Nav />
-          <div className='flex flex-col xl:flex-row w-screen xl:h-[90vh] justify-evenly items-center bg-[#121212] text-zinc-200 mt-2'>
+          <div className='flex flex-col xl:flex-row w-screen xl:h-[90vh] justify-evenly items-center bg-[#121212] text-zinc-200 mt-6 xl:mt-0'>
               <div className='mx-5 lg:mx-20'><form>
                   <div className='text-xs mb-2'>Enter a location, postal code, city, or IP Address to get the current weather conditions</div>
-                  <input type='text' value={this.state.q} onChange={this.weather} className='w-full lg:w-2/3 text-lg text-white focus:outline-none bg-zinc-800 border-2 lg:border-r-0 border-zinc-600 p-2 px-4 focus:border-zinc-200'/>
+                  <input type='text' value={this.state.q} onChange={this.weather} className='w-full lg:w-2/3 text-lg text-white focus:outline-none bg-zinc-800 border-2 lg:border-r-0 border-zinc-600 p-2 px-4 focus:border-zinc-200' placeholder='eg. NN15FS, Lagos'/>
 
                   <button onClick={this.clicked} className='mt-2 lg:mt-0 bg-zinc-200 text-zinc-900 py-2.5 px-6 text-xs lg:text-lg hover:bg-blue-600 hover:text-zinc-200'>Fetch</button>
               </form>
@@ -110,9 +110,9 @@ export default class App extends Component {
             </div>
              }
     
-            <div>
+            <div className='text-center'>
             <div className='font-normal text-[10px] mt-8'>Developed by <a href='https://twitter.com/_realao' target='_blank' rel='noreferrer' className='text-blue-400'>Ayodeji</a></div>
-            <div className='font-normal text-[10px] mt-1'>Data is sourced from <a href='https://www.weatherapi.com/' target='_blank' rel='noreferrer' className='text-blue-400'>WeatherAPI</a></div>
+            <div className='font-normal text-[10px] mt-1 mb-4'>Data is sourced from <a href='https://www.weatherapi.com/' target='_blank' rel='noreferrer' className='text-blue-400'>WeatherAPI</a></div>
           </div>
           
           </div>
