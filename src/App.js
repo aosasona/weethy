@@ -86,8 +86,8 @@ export default class App extends Component {
 
               :
 
-              <div className='text-white lg:mx-20 mt-4 lg:mt-0'>
-                  No data found.
+              <div className='text-red-600 lg:mx-20 mt-4 lg:mt-0'>
+                  No data to display.
             </div>
              }
     
