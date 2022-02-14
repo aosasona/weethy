@@ -56,7 +56,7 @@ export default class App extends Component {
         })
         .catch(() => {
             const error = document.getElementById('span__error');
-            error.innerText = 'No data found, please check your input and try again!'
+            error.innerText = 'An error occured, please check your input and try again!'
 
             setTimeout(() => {
                 error.innerText = ''
@@ -73,7 +73,7 @@ export default class App extends Component {
           <div className='flex flex-col xl:flex-row w-screen xl:h-[90vh] justify-evenly items-center bg-[#121212] text-zinc-200 mt-6 xl:mt-0'>
               <div className='mx-5 lg:mx-20'><form>
                   <div className='text-xs mb-2'>Enter a location, postal code, city, or IP Address to get the current weather conditions</div>
-                  <input type='text' value={this.state.q} onChange={this.weather} className='w-full lg:w-2/3 text-lg text-white focus:outline-none bg-zinc-800 border-2 lg:border-r-0 border-zinc-600 p-2 px-4 focus:border-zinc-200' placeholder='eg. NN15FS, Lagos'/>
+                  <input type='text' value={this.state.q} onChange={this.weather} className='w-full lg:w-2/3 text-lg text-white focus:outline-none bg-zinc-800 border-2 lg:border-r-0 border-zinc-600 p-2 px-4 focus:border-zinc-200' placeholder='eg. NN1 5XX, Lagos'/>
 
                   <button onClick={this.clicked} className='mt-2 lg:mt-0 bg-zinc-200 text-zinc-900 py-2.5 px-6 text-xs lg:text-lg hover:bg-blue-600 hover:text-zinc-200'>Fetch</button>
               </form>
@@ -87,9 +87,9 @@ export default class App extends Component {
                 
                 <center className='mb-5'>
                     <img src={'https:' + this.state.icon} className='p-1 w-2/3' alt='weather icon'/>
-                    <h1 className='text-5xl text-orange-100'>{this.state.temp_c}°C</h1>
+                    <h1 className='text-7xl text-orange-100'>{this.state.temp_c}°C</h1>
                     <h3 className='text-sm font-light'>{this.state.condition}</h3>
-                    <p className='mt-1 mb-4'>{this.state.name}, {this.state.region}, {this.state.country}</p>
+                    <p className='text-xs mt-1 mb-4'>{this.state.name}, {this.state.region}, {this.state.country}</p>
                 </center>
 
               
@@ -111,8 +111,8 @@ export default class App extends Component {
              }
     
             <div className='text-center'>
-            <div className='font-normal text-[10px] mt-8'>Developed by <a href='https://twitter.com/_realao' target='_blank' rel='noreferrer' className='text-blue-400'>Ayodeji</a></div>
-            <div className='font-normal text-[10px] mt-1 mb-4'>Data is sourced from <a href='https://www.weatherapi.com/' target='_blank' rel='noreferrer' className='text-blue-400'>WeatherAPI</a></div>
+            <div className='font-normal text-[10px] mt-8'>Developed by <a href='https://twitter.com/_realao' target='_blank' rel='noreferrer' className='text-blue-400'>Ayodeji</a> | <a href='https://github.com/aosasona/weethy' target='_blank' rel='noreferrer' className='text-blue-400'>View On GitHub</a></div>
+            <div className='font-normal text-[10px] mt-1 mb-6'>Data is sourced from <a href='https://www.weatherapi.com/' target='_blank' rel='noreferrer' className='text-blue-400'>WeatherAPI</a></div>
           </div>
           
           </div>
