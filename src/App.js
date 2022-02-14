@@ -34,7 +34,7 @@ export default class App extends Component {
     }
     clicked(a) {
         a.preventDefault()
-        fetch(`http://api.weatherapi.com/v1/current.json?key=${this.state.key}&q=${this.state.q}`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=${this.state.key}&q=${this.state.q}`)
         .then(res => res.json())
         .then(data => {
             this.setState({
