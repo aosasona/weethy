@@ -11,6 +11,7 @@ export default class App extends Component {
             q : '',
             name : null,
             region : null,
+            country : null,
             temp_c : null,
             last_updated : null,
             is_day : null,
@@ -21,6 +22,7 @@ export default class App extends Component {
             cloud : null,
             wind_mph : null,
             wind_dir : null,
+            precip_mm : null
 
         }
         this.weather = this.weather.bind(this)
@@ -38,6 +40,7 @@ export default class App extends Component {
             this.setState({
                 name : data.location.name,
                 region : data.location.region,
+                country : data.location.country,
                 temp_c : data.current.temp_c,
                 last_updated : data.current.last_updated,
                 is_day : data.current.is_day,
@@ -47,7 +50,8 @@ export default class App extends Component {
                 humidity : data.current.humidity, 
                 cloud : data.current.cloud,
                 wind_mph : data.current.wind_mph,
-                wind_dir : data.current.wind_dir
+                wind_dir : data.current.wind_dir,
+                precip_mm : data.current.precip_mm
             })
         })
         .catch(() => {
@@ -79,20 +83,24 @@ export default class App extends Component {
              {
                  this.state.q !== '' && this.state.icon !== null ?
 
-            <div className='text-gray-400 lg:mx-20 mt-4 lg:mt-0'>
+            <div className='text-gray-400 lg:mx-20 mt-4 lg:mt-0 overflow-y-scroll'>
                 
                 <center className='mb-5'>
-                    <img src={'https:' + this.state.icon} className='p-1 w-full' alt='weather icon'/>
-                    <h1 className='text-5xl text-white'>{this.state.temp_c}°C</h1>
+                    <img src={'https:' + this.state.icon} className='p-1 w-2/3' alt='weather icon'/>
+                    <h1 className='text-5xl text-orange-100'>{this.state.temp_c}°C</h1>
                     <h3 className='text-sm font-light'>{this.state.condition}</h3>
+                    <p className='mt-1 mb-4'>{this.state.name}, {this.state.region}, {this.state.country}</p>
                 </center>
 
-              <p className='mt-2 mb-4'>{this.state.name}, {this.state.region}</p>
+              
               
               <p className='block mt-2 mb-4 font-medium'><span className='bg-zinc-700 text-zinc-300 px-3 py-1 rounded-md font-normal mr-4'>FEELS LIKE</span>{this.state.feels_like}°C</p>
               <p className='block mt-2 mb-4 font-medium'><span className='bg-zinc-700 text-zinc-300 px-3 py-1 rounded-md font-normal mr-4'>TIME OF THE DAY</span>{this.state.is_day === 1 ? 'DAY' : 'EVENING/NIGHT'}</p>
-              <p className='block mt-2 mb-4 font-medium'><span className='bg-zinc-700 text-zinc-300 px-3 py-1 rounded-md font-normal mr-4'>WIND SPEED & DIRECTION</span>{this.state.wind_mph} mph, {this.state.wind_dir}</p>
-              <p className='block mt-2 mb-4 font-medium'><span className='bg-zinc-700 text-zinc-300 px-3 py-1 rounded-md font-normal mr-4'>LAST UPDATED</span>{this.state.last_updated}°C</p>
+              <p className='block mt-2 mb-4 font-medium'><span className='bg-zinc-700 text-zinc-300 px-3 py-1 rounded-md font-normal mr-4'>HUMIDITY</span>{this.state.humidity}%</p>
+              <p className='block mt-2 mb-4 font-medium'><span className='bg-zinc-700 text-zinc-300 px-3 py-1 rounded-md font-normal mr-4'>CLOUD</span>{this.state.cloud}%</p>
+              <p className='block mt-2 mb-4 font-medium'><span className='bg-zinc-700 text-zinc-300 px-3 py-1 rounded-md font-normal mr-4'>WIND SPEED & DIRECTION</span>{this.state.wind_mph}mph, {this.state.wind_dir}</p>
+              <p className='block mt-2 mb-4 font-medium'><span className='bg-zinc-700 text-zinc-300 px-3 py-1 rounded-md font-normal mr-4'>PRECIPITATION</span>{this.state.precip_mm}mm</p>
+              <p className='block mt-2 mb-4 font-medium'><span className='bg-zinc-700 text-zinc-300 px-3 py-1 rounded-md font-normal mr-4'>LAST UPDATED</span>{this.state.last_updated}</p>
               </div>
 
               :

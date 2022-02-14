@@ -563,6 +563,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.25rem;
 }
 
+.w-2\/3{
+  width: 66.666667%;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -577,6 +581,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-evenly{
   justify-content: space-evenly;
+}
+
+.overflow-y-scroll{
+  overflow-y: scroll;
 }
 
 .rounded-md{
@@ -808,6 +816,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-zinc-400{
   --tw-text-opacity: 1;
   color: rgb(161 161 170 / var(--tw-text-opacity));
+}
+
+.text-orange-100{
+  --tw-text-opacity: 1;
+  color: rgb(255 237 213 / var(--tw-text-opacity));
 }
 
 .hover\:bg-blue-700:hover{
