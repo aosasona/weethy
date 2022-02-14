@@ -1,1 +1,1 @@
-Mini Project: A simple weather app that makes API calls to https://www.weatherapi.com/ in ReactJS
+A simple weather app that makes API calls to https://www.weatherapi.com/ in ReactJS
