@@ -507,6 +507,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
+.mt-8{
+  margin-top: 2rem;
+}
+
 .block{
   display: block;
 }
@@ -628,6 +632,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[8px\]{
   font-size: 8px;
+}
+
+.text-\[10px\]{
+  font-size: 10px;
 }
 
 .font-light{

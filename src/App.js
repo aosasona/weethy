@@ -91,7 +91,7 @@ export default class App extends Component {
             </div>
              }
     
-            <div className='font-normal text-[8px]'>Developed by <a href='https://twitter.com/_realao' target='_blank' rel='noreferrer' className='text-blue-400'>Ayodeji</a></div>
+            <div className='font-normal text-[10px] mt-8'>Developed by <a href='https://twitter.com/_realao' target='_blank' rel='noreferrer' className='text-blue-400'>Ayodeji</a></div>
 
           </div>
           
